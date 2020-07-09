@@ -1,8 +1,8 @@
 import React from "react";
-import Menu from "../components/Menu.jsx";
+import Menu from "../components/Menu.tsx";
 
-function Page({ props }) {
-  const [counter, setCounter] = React.useState(0);
+function Page() {
+  // const [counter, setCounter] = React.useState(0);
 
   return (
     <>
@@ -17,7 +17,7 @@ function Page({ props }) {
       <h2>Get Initial Props</h2>
       <p>In the function add getInitialProps to your page component, like:</p>
       <pre>
-        {`import React from 'react';
+        {/* {`import React from 'react';
 
 function Page({ props }) {
   return <pre>{ JSON.stringify(props, null, 2) }</pre>;
@@ -29,28 +29,26 @@ Page.getInitialProps = (context) => {
   };
 }
 
-export default Page;`}
+export default Page;`} */}
       </pre>
       <p>
         This will give you the props from the server that you returned on
         getInitialProps function.
       </p>
-      <pre>{JSON.stringify(props, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(props, null, 2)}</pre> */}
       <h2>useState hook test</h2>
+      <p>{/* Clicked {counter} times. */}</p>
       <p>
-        Clicked {counter} times.
-      </p>
-      <p>
-        <button onClick={() => setCounter(counter + 1)}>
-          Add clicks
-        </button>
+        {/* <button onClick={() => setCounter(counter + 1)}> */}
+        Add clicks
+        {/* </button> */}
       </p>
     </>
   );
 }
-Page.getInitialProps = (context) => {
-  return {
-    hello: "world!",
-  };
-};
+// Page.getInitialProps = (context) => {
+//   return {
+//     hello: "world!",
+//   };
+// };
 export default Page;
